@@ -10,7 +10,7 @@ as follows:
 thus enabling relative local links to images to work properly;
 select this option to instead have them in the user's temporary directory
 * _API URL_: specifies an alternate URL for GitHub API calls (typically for corporate users only)
-* _Username/Password_: a limit of 60 updates per hour is imposed by GitHub for unauthenticated
+* _Access Token_: a limit of 60 updates per hour is imposed by GitHub for unauthenticated
 usage of their markdown rendering API, so provide GitHub credentials in these fields to have this
 limit raised, see [here](http://developer.github.com/v3/#rate-limiting) for background
 * _Template File_: an alternate HTML template file to the default may be provided

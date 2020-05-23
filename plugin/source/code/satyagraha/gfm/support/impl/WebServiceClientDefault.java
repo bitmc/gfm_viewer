@@ -18,6 +18,7 @@ import code.satyagraha.gfm.support.api.Config;
 import code.satyagraha.gfm.support.api.WebProxyConfig;
 import code.satyagraha.gfm.support.api.WebProxyConfig.WebProxyData;
 import code.satyagraha.gfm.support.api.WebServiceClient;
+import code.satyagraha.gfm.support.impl.AuthorizationHeaderFilter;
 import code.satyagraha.gfm.support.impl.conn.ConnUtilities;
 
 import com.sun.jersey.api.client.Client;
@@ -71,11 +72,10 @@ public class WebServiceClientDefault implements WebServiceClient {
         Client client = getClient(config.getApiUrl());
         LOGGER.fine("client: " + client);
 
-        String username = config.getUsername();
-        if (username != null && username.length() > 0) {
-            String password = config.getPassword();
+        String token = config.getPassword();
+        if (token != null && token.length() > 0) {
             client.removeFilter(null);
-            client.addFilter(new HTTPBasicAuthFilter(username, password));
+            client.addFilter(new AuthorizationHeaderFilter(String.format("token %s", token)));
         }
         client.addFilter(new LoggingFilter(LOGGER));
 

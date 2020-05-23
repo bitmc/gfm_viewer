@@ -9,7 +9,6 @@ import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_JS_URL_3;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_PASSWORD;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_TEMPLATE;
-import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USERNAME;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USE_ECLIPSE_CONSOLE;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USE_TEMP_DIR;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_MARKDOWN_EXTENSIONS;
@@ -58,9 +57,7 @@ public class PreferencePage extends FieldEditorPreferencePage implements IWorkbe
         
         addField(new StringFieldEditor(P_API_URL, "API URL:", parent));
         
-        addField(new StringFieldEditor(P_USERNAME, "Username:", parent));
-        
-        StringFieldEditor passwordFieldEditor = new StringFieldEditor(P_PASSWORD, "Password:", parent);
+        StringFieldEditor passwordFieldEditor = new StringFieldEditor(P_PASSWORD, "Access Token:", parent);
         passwordFieldEditor.getTextControl(parent).setEchoChar('*');
         addField(passwordFieldEditor);
         

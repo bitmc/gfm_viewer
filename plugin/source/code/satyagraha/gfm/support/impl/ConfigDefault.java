@@ -22,11 +22,6 @@ public class ConfigDefault implements Config {
     public String getApiUrl() {
       return API_ROOT_URL;
     }
-
-    @Override
-    public String getUsername() {
-        return null;
-    }
     
     @Override
     public String getPassword() {

@@ -9,7 +9,6 @@ import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_JS_URL_3;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_PASSWORD;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_TEMPLATE;
-import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USERNAME;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USE_ECLIPSE_CONSOLE;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_MARKDOWN_EXTENSIONS;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USE_TEMP_DIR;
@@ -43,7 +42,6 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		store.setDefault(P_USE_TEMP_DIR, getConfigDefault().useTempDir());
 		store.setDefault(P_API_URL, getConfigDefault().getApiUrl());
-		store.setDefault(P_USERNAME, "");
 		store.setDefault(P_PASSWORD, "");
 		store.setDefault(P_TEMPLATE, "");
 		store.setDefault(P_CSS_URL_1, "");

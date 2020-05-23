@@ -9,7 +9,6 @@ import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_JS_URL_3;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_PASSWORD;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_TEMPLATE;
-import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USERNAME;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USE_TEMP_DIR;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_USE_ECLIPSE_CONSOLE;
 import static code.satyagraha.gfm.viewer.plugin.preferences.PreferenceConstants.P_MARKDOWN_EXTENSIONS;
@@ -66,11 +65,6 @@ public class PreferenceAdapter implements Config {
     @Override
     public String getApiUrl() {
         return getStringPreference(P_API_URL);
-    }
-
-    @Override
-    public String getUsername() {
-        return getStringPreference(P_USERNAME);
     }
     
     @Override

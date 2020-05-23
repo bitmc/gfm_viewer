@@ -9,8 +9,6 @@ public interface Config {
     
     public String getApiUrl();
 
-    public String getUsername();
-    
     public String getPassword();
 
     public String getHtmlTemplate() throws IOException;

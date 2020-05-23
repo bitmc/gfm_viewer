@@ -23,17 +23,10 @@ public class TrackFile {
 
     private static class ConfigTrackFile extends ConfigDefault {
         
-        private String username;
         private String password;
 
-        public ConfigTrackFile(String username, String password) {
-            this.username = username;
+        public ConfigTrackFile(String password) {
             this.password = password;
-        }
-        
-        @Override
-        public String getUsername() {
-            return username;
         }
         
         @Override
@@ -82,8 +75,8 @@ public class TrackFile {
 
     public static void main(String[] args) throws IOException {
         LOGGER.info("commencing execution");
-        ConfigTrackFile config = new ConfigTrackFile(args[0], args[1]);
+        ConfigTrackFile config = new ConfigTrackFile(args[0]);
         TrackFile instance = new TrackFile(config);
-        instance.manage(args[2]);
+        instance.manage(args[1]);
     }
 }
